@@ -23,11 +23,13 @@
   "scripts": {
     "build": "tsup && node scripts/copy-css.js",
     "clean": "rimraf dist",
-    "lint": "eslint src/",
+    "lint": "eslint --ext .ts,.tsx src/",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@nexus-ui/eslint-config": "workspace:*",
     "@nexus-ui/tsconfig": "workspace:*",
+    "eslint": "^8.57.0",
     "tsup": "^8.0.0",
     "typescript": "^5.4.0",
     "rimraf": "^5.0.0"

@@ -22,7 +22,7 @@
   "scripts": {
     "build": "tsup",
     "clean": "rimraf dist",
-    "lint": "eslint src/",
+    "lint": "eslint --ext .ts,.tsx src/",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },

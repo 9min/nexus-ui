@@ -14,11 +14,13 @@ describe('useMediaQuery', () => {
         matches: false,
         media: query,
         onchange: null,
-        addEventListener: (_: string, cb: () => void) => {
+        addEventListener: vi.fn((_: string, cb: () => void) => {
           listeners.push(cb);
-        },
+        }),
         removeEventListener: vi.fn(),
         dispatchEvent: vi.fn(),
+        addListener: vi.fn(),
+        removeListener: vi.fn(),
       })),
     });
   });
@@ -52,9 +54,9 @@ describe('useMediaQuery', () => {
       },
       media: query,
       onchange: null,
-      addEventListener: (_: string, cb: () => void) => {
+      addEventListener: vi.fn((_: string, cb: () => void) => {
         listeners.push(cb);
-      },
+      }),
       removeEventListener: vi.fn(),
       dispatchEvent: vi.fn(),
       addListener: vi.fn(),
