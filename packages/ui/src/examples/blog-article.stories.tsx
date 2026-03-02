@@ -379,6 +379,7 @@ function BlogArticlePage() {
 
 const meta: Meta = {
   title: 'Examples/Blog Article',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

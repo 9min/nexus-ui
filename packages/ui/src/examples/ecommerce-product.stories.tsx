@@ -324,6 +324,7 @@ function EcommerceProductPage() {
 
 const meta: Meta = {
   title: 'Examples/E-Commerce Product',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

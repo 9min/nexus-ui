@@ -299,6 +299,7 @@ function MailInboxPage() {
 
 const meta: Meta = {
   title: 'Examples/Mail Inbox',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

@@ -257,6 +257,7 @@ function OverviewPage() {
 
 const meta: Meta = {
   title: 'Foundations/Overview',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

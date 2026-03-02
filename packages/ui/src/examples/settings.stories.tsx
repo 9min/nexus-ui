@@ -298,6 +298,7 @@ function SettingsPage() {
 
 const meta: Meta = {
   title: 'Examples/Settings',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 
