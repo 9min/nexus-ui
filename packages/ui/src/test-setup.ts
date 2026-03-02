@@ -12,6 +12,13 @@ if (typeof Element !== 'undefined') {
   Element.prototype.scrollIntoView = Element.prototype.scrollIntoView || (() => {});
 }
 
+// Polyfill for ResizeObserver (needed by ScrollArea, Slider, etc.)
+global.ResizeObserver = class ResizeObserver {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
