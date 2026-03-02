@@ -82,6 +82,14 @@ const config: Config = {
           from: { transform: 'translateY(100%)' },
           to: { transform: 'translateY(0)' },
         },
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 150ms ease-out',
@@ -90,6 +98,8 @@ const config: Config = {
         'scale-out': 'scale-out 150ms ease-in',
         'slide-in-from-top': 'slide-in-from-top 200ms ease-out',
         'slide-in-from-bottom': 'slide-in-from-bottom 200ms ease-out',
+        'accordion-down': 'accordion-down 200ms ease-out',
+        'accordion-up': 'accordion-up 200ms ease-out',
       },
     },
   },
