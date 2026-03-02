@@ -2,7 +2,7 @@
 
 <div align="center">
 
-Enterprise-grade React design system built with Radix UI, Tailwind CSS, and TypeScript.
+Radix UI, Tailwind CSS, TypeScript 기반의 엔터프라이즈급 React 디자인 시스템
 
 [![CI](https://github.com/9min/nexus-ui/actions/workflows/ci.yml/badge.svg)](https://github.com/9min/nexus-ui/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -12,94 +12,94 @@ Enterprise-grade React design system built with Radix UI, Tailwind CSS, and Type
 
 ---
 
-## Features
+## 주요 특징
 
-- **23 accessible components** built on [Radix UI](https://www.radix-ui.com/) primitives
-- **3 utility hooks** for common UI patterns
-- **Design token system** with CSS Variables and light/dark theme support
-- **CVA-based variant management** for type-safe styling
-- **Tree-shakeable** ESM and CJS builds
-- **Full Storybook documentation** for every component
-- **136+ tests** with Vitest and React Testing Library
-- **WAI-ARIA 1.2 compliant** with keyboard navigation and focus management
+- [Radix UI](https://www.radix-ui.com/) 프리미티브 기반 **접근성 준수 컴포넌트 23개**
+- 공통 UI 패턴을 위한 **유틸리티 훅 3개**
+- CSS Variables 기반 **디자인 토큰 시스템** (라이트/다크 테마 지원)
+- **CVA 기반 Variant 관리**로 타입 안전한 스타일링
+- **Tree-shakeable** ESM 및 CJS 빌드
+- 모든 컴포넌트의 **Storybook 문서화** 완비
+- Vitest + React Testing Library **136개 이상의 테스트**
+- **WAI-ARIA 1.2 준수** (키보드 내비게이션, 포커스 관리)
 
-## Packages
+## 패키지
 
-| Package                                 | Description                                 | Version                                                                                                     |
-| --------------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| [`@nexus-ui/ui`](./packages/ui)         | React component library                     | [![npm](https://img.shields.io/npm/v/@nexus-ui/ui.svg)](https://www.npmjs.com/package/@nexus-ui/ui)         |
-| [`@nexus-ui/hooks`](./packages/hooks)   | Utility React hooks                         | [![npm](https://img.shields.io/npm/v/@nexus-ui/hooks.svg)](https://www.npmjs.com/package/@nexus-ui/hooks)   |
-| [`@nexus-ui/tokens`](./packages/tokens) | Design tokens (colors, typography, spacing) | [![npm](https://img.shields.io/npm/v/@nexus-ui/tokens.svg)](https://www.npmjs.com/package/@nexus-ui/tokens) |
+| 패키지                                  | 설명                                   | 버전                                                                                                        |
+| --------------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [`@nexus-ui/ui`](./packages/ui)         | React 컴포넌트 라이브러리              | [![npm](https://img.shields.io/npm/v/@nexus-ui/ui.svg)](https://www.npmjs.com/package/@nexus-ui/ui)         |
+| [`@nexus-ui/hooks`](./packages/hooks)   | 유틸리티 React 훅                      | [![npm](https://img.shields.io/npm/v/@nexus-ui/hooks.svg)](https://www.npmjs.com/package/@nexus-ui/hooks)   |
+| [`@nexus-ui/tokens`](./packages/tokens) | 디자인 토큰 (색상, 타이포그래피, 간격) | [![npm](https://img.shields.io/npm/v/@nexus-ui/tokens.svg)](https://www.npmjs.com/package/@nexus-ui/tokens) |
 
-## Components
+## 컴포넌트
 
-### Form
+### 폼
 
-| Component                                              | Description                                                           |
-| ------------------------------------------------------ | --------------------------------------------------------------------- |
-| [Button](./packages/ui/src/components/button)          | Multi-variant button with loading state, icons, and `asChild` support |
-| [Input](./packages/ui/src/components/input)            | Text input with consistent styling                                    |
-| [Textarea](./packages/ui/src/components/textarea)      | Multi-line text input                                                 |
-| [Label](./packages/ui/src/components/label)            | Accessible form label                                                 |
-| [Checkbox](./packages/ui/src/components/checkbox)      | Checkbox with indeterminate state                                     |
-| [Switch](./packages/ui/src/components/switch)          | Toggle switch                                                         |
-| [RadioGroup](./packages/ui/src/components/radio-group) | Radio button group                                                    |
-| [Select](./packages/ui/src/components/select)          | Accessible select dropdown                                            |
+| 컴포넌트                                               | 설명                                                |
+| ------------------------------------------------------ | --------------------------------------------------- |
+| [Button](./packages/ui/src/components/button)          | 로딩 상태, 아이콘, `asChild` 지원 다중 Variant 버튼 |
+| [Input](./packages/ui/src/components/input)            | 일관된 스타일의 텍스트 입력                         |
+| [Textarea](./packages/ui/src/components/textarea)      | 여러 줄 텍스트 입력                                 |
+| [Label](./packages/ui/src/components/label)            | 접근성 준수 폼 레이블                               |
+| [Checkbox](./packages/ui/src/components/checkbox)      | 불확정 상태 지원 체크박스                           |
+| [Switch](./packages/ui/src/components/switch)          | 토글 스위치                                         |
+| [RadioGroup](./packages/ui/src/components/radio-group) | 라디오 버튼 그룹                                    |
+| [Select](./packages/ui/src/components/select)          | 접근성 준수 셀렉트 드롭다운                         |
 
-### Overlay
+### 오버레이
 
-| Component                                                  | Description                                       |
-| ---------------------------------------------------------- | ------------------------------------------------- |
-| [Dialog](./packages/ui/src/components/dialog)              | Modal dialog with focus trap and portal           |
-| [AlertDialog](./packages/ui/src/components/alert-dialog)   | Confirmation dialog with cancel/action            |
-| [Popover](./packages/ui/src/components/popover)            | Floating popover panel                            |
-| [Tooltip](./packages/ui/src/components/tooltip)            | Informational tooltip on hover/focus              |
-| [DropdownMenu](./packages/ui/src/components/dropdown-menu) | Accessible dropdown menu with sub-menus           |
-| [Toast](./packages/ui/src/components/toast)                | Notification toast with variants and auto-dismiss |
+| 컴포넌트                                                   | 설명                                      |
+| ---------------------------------------------------------- | ----------------------------------------- |
+| [Dialog](./packages/ui/src/components/dialog)              | 포커스 트랩과 포털을 갖춘 모달 다이얼로그 |
+| [AlertDialog](./packages/ui/src/components/alert-dialog)   | 취소/확인 액션이 있는 확인 다이얼로그     |
+| [Popover](./packages/ui/src/components/popover)            | 플로팅 팝오버 패널                        |
+| [Tooltip](./packages/ui/src/components/tooltip)            | 호버/포커스 시 정보 표시 툴팁             |
+| [DropdownMenu](./packages/ui/src/components/dropdown-menu) | 서브메뉴 지원 접근성 준수 드롭다운 메뉴   |
+| [Toast](./packages/ui/src/components/toast)                | Variant 및 자동 닫기 지원 알림 토스트     |
 
-### Display
+### 표시
 
-| Component                                           | Description                         |
+| 컴포넌트                                            | 설명                                |
 | --------------------------------------------------- | ----------------------------------- |
-| [Badge](./packages/ui/src/components/badge)         | Status badge with variants          |
-| [Avatar](./packages/ui/src/components/avatar)       | User avatar with image and fallback |
-| [Progress](./packages/ui/src/components/progress)   | Progress bar indicator              |
-| [Separator](./packages/ui/src/components/separator) | Visual divider                      |
+| [Badge](./packages/ui/src/components/badge)         | Variant 지원 상태 뱃지              |
+| [Avatar](./packages/ui/src/components/avatar)       | 이미지 및 폴백을 갖춘 사용자 아바타 |
+| [Progress](./packages/ui/src/components/progress)   | 진행률 표시 바                      |
+| [Separator](./packages/ui/src/components/separator) | 시각적 구분선                       |
 
-### Navigation
+### 내비게이션
 
-| Component                                           | Description                  |
-| --------------------------------------------------- | ---------------------------- |
-| [Tabs](./packages/ui/src/components/tabs)           | Tabbed interface             |
-| [Accordion](./packages/ui/src/components/accordion) | Collapsible content sections |
+| 컴포넌트                                            | 설명                     |
+| --------------------------------------------------- | ------------------------ |
+| [Tabs](./packages/ui/src/components/tabs)           | 탭 인터페이스            |
+| [Accordion](./packages/ui/src/components/accordion) | 접을 수 있는 콘텐츠 섹션 |
 
-### Layout
+### 레이아웃
 
-| Component                                                   | Description                    |
-| ----------------------------------------------------------- | ------------------------------ |
-| [ScrollArea](./packages/ui/src/components/scroll-area)      | Custom styled scrollable area  |
-| [Slider](./packages/ui/src/components/slider)               | Range slider input             |
-| [Toggle / ToggleGroup](./packages/ui/src/components/toggle) | Toggle button and toggle group |
+| 컴포넌트                                                    | 설명                      |
+| ----------------------------------------------------------- | ------------------------- |
+| [ScrollArea](./packages/ui/src/components/scroll-area)      | 커스텀 스타일 스크롤 영역 |
+| [Slider](./packages/ui/src/components/slider)               | 범위 슬라이더 입력        |
+| [Toggle / ToggleGroup](./packages/ui/src/components/toggle) | 토글 버튼 및 토글 그룹    |
 
-## Hooks
+## 훅
 
-| Hook              | Description                            |
-| ----------------- | -------------------------------------- |
-| `useMediaQuery`   | Subscribe to CSS media query changes   |
-| `useDebounce`     | Debounce a rapidly changing value      |
-| `useClickOutside` | Detect clicks outside a target element |
+| 훅                | 설명                          |
+| ----------------- | ----------------------------- |
+| `useMediaQuery`   | CSS 미디어 쿼리 변화 구독     |
+| `useDebounce`     | 빠르게 변화하는 값의 디바운스 |
+| `useClickOutside` | 대상 요소 외부 클릭 감지      |
 
-## Quick Start
+## 빠른 시작
 
-### Installation
+### 설치
 
 ```bash
 pnpm add @nexus-ui/ui @nexus-ui/tokens
 ```
 
-### Tailwind CSS Setup
+### Tailwind CSS 설정
 
-Add the nexus-ui content path to your `tailwind.config.js`:
+`tailwind.config.js`에 nexus-ui 콘텐츠 경로를 추가합니다:
 
 ```js
 /** @type {import('tailwindcss').Config} */
@@ -109,14 +109,14 @@ module.exports = {
 };
 ```
 
-### Import Tokens CSS
+### 토큰 CSS 임포트
 
 ```tsx
-// app entry point (e.g., main.tsx or layout.tsx)
+// 앱 진입점 (예: main.tsx 또는 layout.tsx)
 import '@nexus-ui/tokens/styles.css';
 ```
 
-### Usage
+### 사용 예시
 
 ```tsx
 import { Button } from '@nexus-ui/ui';
@@ -124,22 +124,22 @@ import { Button } from '@nexus-ui/ui';
 function App() {
   return (
     <Button variant="solid" size="md" intent="primary">
-      Get Started
+      시작하기
     </Button>
   );
 }
 ```
 
-## Development
+## 개발 환경
 
-### Prerequisites
+### 사전 요구사항
 
-| Tool    | Version |
-| ------- | ------- |
-| Node.js | >= 20   |
-| pnpm    | >= 9.0  |
+| 도구    | 버전   |
+| ------- | ------ |
+| Node.js | >= 20  |
+| pnpm    | >= 9.0 |
 
-### Setup
+### 설정
 
 ```bash
 git clone https://github.com/9min/nexus-ui.git
@@ -147,108 +147,108 @@ cd nexus-ui
 pnpm install
 ```
 
-### Commands
+### 명령어
 
-| Command          | Description                                                |
-| ---------------- | ---------------------------------------------------------- |
-| `pnpm dev`       | Start all dev servers (Storybook + packages in watch mode) |
-| `pnpm build`     | Build all packages                                         |
-| `pnpm test`      | Run all tests                                              |
-| `pnpm lint`      | Lint all packages                                          |
-| `pnpm typecheck` | Type-check all packages                                    |
-| `pnpm format`    | Format code with Prettier                                  |
-| `pnpm clean`     | Remove all build artifacts                                 |
-| `pnpm changeset` | Create a changeset for versioning                          |
+| 명령어           | 설명                                                |
+| ---------------- | --------------------------------------------------- |
+| `pnpm dev`       | 전체 개발 서버 실행 (Storybook + 패키지 watch 모드) |
+| `pnpm build`     | 전체 패키지 빌드                                    |
+| `pnpm test`      | 전체 테스트 실행                                    |
+| `pnpm lint`      | 전체 패키지 린트                                    |
+| `pnpm typecheck` | 전체 패키지 타입 검사                               |
+| `pnpm format`    | Prettier로 코드 포맷팅                              |
+| `pnpm clean`     | 전체 빌드 결과물 삭제                               |
+| `pnpm changeset` | 버저닝을 위한 changeset 생성                        |
 
-## Project Structure
+## 프로젝트 구조
 
 ```text
 nexus-ui/
 ├── apps/
-│   └── docs/                 # Storybook documentation site
+│   └── docs/                 # Storybook 문서 사이트
 ├── packages/
-│   ├── ui/                   # @nexus-ui/ui — Component library
-│   │   └── src/components/   # 23 components
-│   ├── hooks/                # @nexus-ui/hooks — Utility hooks
-│   ├── tokens/               # @nexus-ui/tokens — Design tokens + CSS
-│   ├── tsconfig/             # Shared TypeScript configs
-│   └── eslint-config/        # Shared ESLint config
-├── .github/workflows/        # CI, release, and docs pipelines
-├── docs/                     # Architecture, design, and workflow docs
-├── turbo.json                # Turborepo pipeline config
-└── pnpm-workspace.yaml       # pnpm workspace definition
+│   ├── ui/                   # @nexus-ui/ui — 컴포넌트 라이브러리
+│   │   └── src/components/   # 23개 컴포넌트
+│   ├── hooks/                # @nexus-ui/hooks — 유틸리티 훅
+│   ├── tokens/               # @nexus-ui/tokens — 디자인 토큰 + CSS
+│   ├── tsconfig/             # 공유 TypeScript 설정
+│   └── eslint-config/        # 공유 ESLint 설정
+├── .github/workflows/        # CI, 릴리스, 문서 배포 파이프라인
+├── docs/                     # 아키텍처, 설계, 워크플로우 문서
+├── turbo.json                # Turborepo 파이프라인 설정
+└── pnpm-workspace.yaml       # pnpm 워크스페이스 정의
 ```
 
-## Design Tokens
+## 디자인 토큰
 
-nexus-ui uses **CSS Custom Properties** (variables) for theming. Tokens cover colors, typography, spacing, and border radius.
+nexus-ui는 테마 시스템에 **CSS Custom Properties**(변수)를 사용합니다. 토큰은 색상, 타이포그래피, 간격, 테두리 둥글기를 포함합니다.
 
-Themes are toggled via a CSS class on the root element:
+테마는 루트 요소의 CSS 클래스를 통해 전환됩니다:
 
 ```html
-<!-- Light theme (default) -->
+<!-- 라이트 테마 (기본값) -->
 <html class="light">
   ...
 </html>
 
-<!-- Dark theme -->
+<!-- 다크 테마 -->
 <html class="dark">
   ...
 </html>
 ```
 
-All component styles reference token variables (e.g., `bg-primary`, `text-foreground`, `border-border`), ensuring consistent theming across your app. See [docs/DESIGN.md](./docs/DESIGN.md) for the full token reference.
+모든 컴포넌트 스타일은 토큰 변수(예: `bg-primary`, `text-foreground`, `border-border`)를 참조하여 앱 전체에서 일관된 테마를 보장합니다. 전체 토큰 참조는 [docs/DESIGN.md](./docs/DESIGN.md)를 확인하세요.
 
-## Contributing
+## 기여 방법
 
-1. Create a branch from `main` using the appropriate prefix:
-   - `feature/` — new functionality
-   - `fix/` — bug fixes
-   - `docs/` — documentation
-   - `chore/` — tooling, dependencies
-   - `refactor/` — code improvements
-   - `test/` — test additions
+1. `main`에서 적절한 접두사를 사용하여 브랜치를 생성합니다:
+   - `feature/` — 새로운 기능
+   - `fix/` — 버그 수정
+   - `docs/` — 문서
+   - `chore/` — 도구, 의존성
+   - `refactor/` — 코드 개선
+   - `test/` — 테스트 추가
 
-2. Use [Conventional Commits](https://www.conventionalcommits.org/):
+2. [Conventional Commits](https://www.conventionalcommits.org/) 형식을 사용합니다:
 
    ```text
    feat(ui): add Tooltip component
    fix(hooks): resolve useDebounce cleanup on unmount
    ```
 
-3. Add a [changeset](https://github.com/changesets/changesets) if your change affects published packages:
+3. 배포 패키지에 영향을 주는 변경이라면 [changeset](https://github.com/changesets/changesets)을 추가합니다:
 
    ```bash
    pnpm changeset
    ```
 
-4. Open a PR against `main`. All CI checks (lint, typecheck, test, build) must pass.
+4. `main`을 대상으로 PR을 생성합니다. 모든 CI 검사(lint, typecheck, test, build)를 통과해야 합니다.
 
-See [docs/GIT_WORKFLOW.md](./docs/GIT_WORKFLOW.md) for the full workflow and branching rules.
+전체 워크플로우 및 브랜치 규칙은 [docs/GIT_WORKFLOW.md](./docs/GIT_WORKFLOW.md)를 참조하세요.
 
-## Tech Stack
+## 기술 스택
 
-| Technology                                             | Purpose                              |
-| ------------------------------------------------------ | ------------------------------------ |
-| [React 18](https://react.dev/)                         | UI framework                         |
-| [TypeScript](https://www.typescriptlang.org/)          | Type safety                          |
-| [Tailwind CSS](https://tailwindcss.com/)               | Utility-first styling                |
-| [Radix UI](https://www.radix-ui.com/)                  | Accessible headless primitives       |
-| [Turborepo](https://turbo.build/)                      | Monorepo build orchestration         |
-| [tsup](https://tsup.egoist.dev/)                       | TypeScript bundler (ESM + CJS + DTS) |
-| [Vitest](https://vitest.dev/)                          | Unit testing                         |
-| [Storybook 8](https://storybook.js.org/)               | Component documentation              |
-| [Changesets](https://github.com/changesets/changesets) | Versioning and changelogs            |
+| 기술                                                   | 용도                                |
+| ------------------------------------------------------ | ----------------------------------- |
+| [React 18](https://react.dev/)                         | UI 프레임워크                       |
+| [TypeScript](https://www.typescriptlang.org/)          | 타입 안전성                         |
+| [Tailwind CSS](https://tailwindcss.com/)               | 유틸리티 우선 스타일링              |
+| [Radix UI](https://www.radix-ui.com/)                  | 접근성 준수 헤드리스 프리미티브     |
+| [Turborepo](https://turbo.build/)                      | 모노레포 빌드 오케스트레이션        |
+| [tsup](https://tsup.egoist.dev/)                       | TypeScript 번들러 (ESM + CJS + DTS) |
+| [Vitest](https://vitest.dev/)                          | 단위 테스트                         |
+| [Storybook 8](https://storybook.js.org/)               | 컴포넌트 문서화                     |
+| [Changesets](https://github.com/changesets/changesets) | 버저닝 및 변경 이력                 |
 
-## Browser Support
+## 브라우저 지원
 
-| Browser | Minimum Version |
-| ------- | --------------- |
-| Chrome  | 90+             |
-| Safari  | 15+             |
-| Firefox | 90+             |
-| Edge    | 90+             |
+| 브라우저 | 최소 버전 |
+| -------- | --------- |
+| Chrome   | 90+       |
+| Safari   | 15+       |
+| Firefox  | 90+       |
+| Edge     | 90+       |
 
-## License
+## 라이선스
 
 MIT
