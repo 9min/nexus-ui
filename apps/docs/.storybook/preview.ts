@@ -13,6 +13,15 @@ const preview: Preview = {
     backgrounds: {
       grid: { disable: true },
     },
+    options: {
+      storySort: {
+        order: [
+          'Foundations', ['Overview', 'Colors', 'Typography', 'Spacing & Layout', 'Animations'],
+          'Examples',
+          'Components',
+        ],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
