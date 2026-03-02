@@ -3,7 +3,13 @@ import type { Preview } from '@storybook/react';
 import '../src/styles.css';
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
+    docs: {
+      source: {
+        type: 'code',
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
