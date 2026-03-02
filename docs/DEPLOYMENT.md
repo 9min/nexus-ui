@@ -14,7 +14,7 @@ Workflow 1: CI (PR 검증)
 ├── Typecheck
 ├── Test (Vitest)
 ├── Build
-└── Chromatic VRT
+└── Chromatic VRT (비활성 — 토큰 설정 후 활성화 예정)
     ↓ (모두 통과 + 리뷰 승인)
 [main Merge]
     ↓
@@ -157,7 +157,7 @@ ci.yml 트리거
     ├── typecheck  ─────────→ ✅
     ├── test       ─────────→ ✅
     ├── build      ─────────→ ✅
-    └── chromatic  ─────────→ ✅ (리뷰 필요 시 Chromatic 대시보드)
+    └── chromatic  ─────────→ ⏸️ (비활성 — CHROMATIC_PROJECT_TOKEN 설정 후 활성화)
 ```
 
 - 5개 잡이 **동시에 병렬 실행**되어 총 실행 시간을 최소화합니다.
@@ -372,7 +372,7 @@ feature/* 브랜치에서 PR 생성
     ↓
 ┌── CI Workflow ──────────────────────┐
 │  Lint ✅  Typecheck ✅  Test ✅      │
-│  Build ✅  Chromatic ✅              │
+│  Build ✅  Chromatic ⏸️              │
 └─────────────────────────────────────┘
     ↓
 CodeRabbit 리뷰 + 동료 리뷰 → 승인

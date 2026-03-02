@@ -363,15 +363,16 @@
 
 ## 8. 향후 로드맵
 
-### Phase 1 (현재)
-- 핵심 컴포넌트 5종 구현 (Button, Dialog, Select, Dropdown Menu, Toast)
-- 디자인 토큰 시스템 구축
-- Storybook 문서화 및 자동 배포
+### Phase 1 ✅ 완료
+- ~~핵심 컴포넌트 5종 구현~~ → **36개 컴포넌트** 구현 완료 (Button, Dialog, Select 등)
+- ~~디자인 토큰 시스템 구축~~ → CSS Variables 기반 라이트/다크 테마 완료
+- ~~Storybook 문서화 및 자동 배포~~ → Foundations 5페이지 + Examples 10페이지 + 컴포넌트 Autodocs 완료
+- **225개 테스트** (UI 215 + Hooks 10) 통과
 
-### Phase 2
-- 추가 컴포넌트 확장 (Table, Tabs, Tooltip, Popover, Accordion 등)
-- Form 통합 (React Hook Form 연동 가이드)
-- 다국어(i18n) 지원
+### Phase 2 ✅ 완료
+- ~~추가 컴포넌트 확장~~ → PR#2에서 18개, PR#5에서 13개 컴포넌트 추가 완료
+- Form 통합 (React Hook Form 연동 가이드) — 미착수
+- 다국어(i18n) 지원 — 미착수
 
 ### Phase 3
 - React 19 마이그레이션
