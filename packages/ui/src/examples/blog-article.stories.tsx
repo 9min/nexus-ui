@@ -306,7 +306,7 @@ function BlogArticlePage() {
                         {ARTICLE.sections.map((section) => (
                           <li key={section}>
                             <a
-                              href={`#${section.toLowerCase().replace(/\s+/g, '-')}`}
+                              href={`#${section.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, '-')}`}
                               className={cn('text-sm text-muted-foreground hover:text-foreground')}
                             >
                               {section}

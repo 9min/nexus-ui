@@ -277,10 +277,10 @@ function OnboardingWizard() {
                 {INTERESTS.map((interest) => (
                   <Label
                     key={interest}
-                    htmlFor={`interest-${interest}`}
+                    htmlFor={`interest-${interest.toLowerCase().replace(/\s+/g, '-')}`}
                     className={cn('flex cursor-pointer items-center gap-2 rounded-full border border-border px-3 py-1.5 text-sm hover:bg-accent')}
                   >
-                    <Checkbox id={`interest-${interest}`} />
+                    <Checkbox id={`interest-${interest.toLowerCase().replace(/\s+/g, '-')}`} />
                     {interest}
                   </Label>
                 ))}

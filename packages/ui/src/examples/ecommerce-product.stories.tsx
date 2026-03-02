@@ -91,7 +91,7 @@ const SPECS = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <span className={cn('flex items-center gap-0.5')} aria-label={`${rating} out of 5 stars`}>
+    <span role="img" className={cn('flex items-center gap-0.5')} aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }, (_, i) => (
         <span key={i} className={cn(i < Math.floor(rating) ? 'text-yellow-500' : 'text-muted-foreground/30')}>
           &#9733;

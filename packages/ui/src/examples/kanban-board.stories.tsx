@@ -162,7 +162,7 @@ function TaskCard({ task }: { task: Task }) {
       <ContextMenuTrigger>
         <Sheet>
           <SheetTrigger asChild>
-            <Card className={cn('cursor-pointer transition-colors hover:bg-accent')}>
+            <Card role="button" tabIndex={0} className={cn('cursor-pointer transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring')}>
               <CardContent className={cn('p-4')}>
                 <div className={cn('mb-2 flex items-center justify-between')}>
                   <span className={cn('text-xs text-muted-foreground')}>{task.id}</span>
@@ -262,7 +262,7 @@ function TaskCard({ task }: { task: Task }) {
 function KanbanBoardPage() {
   const totalTasks = INITIAL_COLUMNS.reduce((sum, col) => sum + col.tasks.length, 0);
   const doneTasks = INITIAL_COLUMNS.find((c) => c.id === 'done')?.tasks.length ?? 0;
-  const progressPercent = Math.round((doneTasks / totalTasks) * 100);
+  const progressPercent = totalTasks === 0 ? 0 : Math.round((doneTasks / totalTasks) * 100);
 
   return (
     <TooltipProvider>

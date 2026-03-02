@@ -329,7 +329,7 @@ function MusicPlayerPage() {
                       >
                         <span className={cn('w-6 text-right text-sm text-muted-foreground')}>
                           {track.id === NOW_PLAYING.id && isPlaying ? (
-                            <span aria-label="Now playing">&#9654;</span>
+                            <span role="img" aria-label="Now playing">&#9654;</span>
                           ) : (
                             i + 1
                           )}

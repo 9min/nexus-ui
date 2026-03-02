@@ -312,7 +312,7 @@ function DataTablePage() {
           {/* Pagination */}
           <div className={cn('flex items-center justify-between')}>
             <p className={cn('text-sm text-muted-foreground')}>
-              Showing {page * PAGE_SIZE + 1}-{Math.min((page + 1) * PAGE_SIZE, filtered.length)} of{' '}
+              Showing {filtered.length === 0 ? 0 : page * PAGE_SIZE + 1}-{Math.min((page + 1) * PAGE_SIZE, filtered.length)} of{' '}
               {filtered.length} users
             </p>
             <div className={cn('flex items-center gap-2')}>

@@ -107,9 +107,9 @@ function FileManagerPage() {
     setSelectedIds((prev) => {
       const next = new Set(prev);
       if (allSelected) {
-        filtered.forEach((f) => next.delete(f.id));
+        filtered.forEach((f) => { next.delete(f.id); });
       } else {
-        filtered.forEach((f) => next.add(f.id));
+        filtered.forEach((f) => { next.add(f.id); });
       }
       return next;
     });
