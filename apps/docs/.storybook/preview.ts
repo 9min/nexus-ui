@@ -3,7 +3,25 @@ import type { Preview } from '@storybook/react';
 import '../src/styles.css';
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
+    docs: {
+      source: {
+        type: 'code',
+      },
+    },
+    backgrounds: {
+      grid: { disable: true },
+    },
+    options: {
+      storySort: {
+        order: [
+          'Foundations', ['Overview', 'Colors', 'Typography', 'Spacing & Layout', 'Animations'],
+          'Examples',
+          'Components',
+        ],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
