@@ -13,7 +13,9 @@ nexus-ui/
 │   │   ├── .storybook/
 │   │   │   ├── main.ts          # Storybook 설정
 │   │   │   └── preview.ts       # 글로벌 데코레이터, 파라미터
-│   │   ├── stories/             # 추가 문서 페이지 (MDX)
+│   │   ├── stories/
+│   │   │   ├── foundations/     # 디자인 토큰 문서 (Colors, Typography 등 5페이지)
+│   │   │   └── examples/       # 컴포넌트 조합 예시 (LoginForm, Dashboard 등 10페이지)
 │   │   └── package.json
 │   └── web/                     # 테스트용 Playground 앱 (Next.js)
 │       ├── app/
@@ -21,7 +23,7 @@ nexus-ui/
 │       └── package.json
 │
 ├── packages/
-│   ├── ui/                      # @nexus-ui/ui — 핵심 UI 컴포넌트
+│   ├── ui/                      # @nexus-ui/ui — 핵심 UI 컴포넌트 (36개)
 │   │   ├── src/
 │   │   │   ├── components/
 │   │   │   │   ├── button/
@@ -32,7 +34,38 @@ nexus-ui/
 │   │   │   │   ├── dialog/
 │   │   │   │   ├── select/
 │   │   │   │   ├── dropdown-menu/
-│   │   │   │   └── toast/
+│   │   │   │   ├── toast/
+│   │   │   │   ├── label/
+│   │   │   │   ├── separator/
+│   │   │   │   ├── badge/
+│   │   │   │   ├── input/
+│   │   │   │   ├── textarea/
+│   │   │   │   ├── checkbox/
+│   │   │   │   ├── switch/
+│   │   │   │   ├── progress/
+│   │   │   │   ├── avatar/
+│   │   │   │   ├── tooltip/
+│   │   │   │   ├── popover/
+│   │   │   │   ├── alert-dialog/
+│   │   │   │   ├── radio-group/
+│   │   │   │   ├── tabs/
+│   │   │   │   ├── accordion/
+│   │   │   │   ├── scroll-area/
+│   │   │   │   ├── slider/
+│   │   │   │   ├── toggle/
+│   │   │   │   ├── card/
+│   │   │   │   ├── alert/
+│   │   │   │   ├── skeleton/
+│   │   │   │   ├── table/
+│   │   │   │   ├── breadcrumb/
+│   │   │   │   ├── aspect-ratio/
+│   │   │   │   ├── collapsible/
+│   │   │   │   ├── hover-card/
+│   │   │   │   ├── context-menu/
+│   │   │   │   ├── menubar/
+│   │   │   │   ├── navigation-menu/
+│   │   │   │   ├── sheet/
+│   │   │   │   └── toolbar/
 │   │   │   ├── lib/
 │   │   │   │   └── utils.ts     # cn() 유틸리티
 │   │   │   └── index.ts         # 퍼블릭 API (배럴 export)
