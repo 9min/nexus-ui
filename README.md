@@ -1,6 +1,6 @@
-<div align="center">
-
 # nexus-ui
+
+<div align="center">
 
 Enterprise-grade React design system built with Radix UI, Tailwind CSS, and TypeScript.
 
@@ -162,7 +162,7 @@ pnpm install
 
 ## Project Structure
 
-```
+```text
 nexus-ui/
 ├── apps/
 │   └── docs/                 # Storybook documentation site
@@ -188,8 +188,12 @@ Themes are toggled via a CSS class on the root element:
 ```html
 <!-- Light theme (default) -->
 <html class="light">
-  <!-- Dark theme -->
-  <html class="dark"></html>
+  ...
+</html>
+
+<!-- Dark theme -->
+<html class="dark">
+  ...
 </html>
 ```
 
@@ -207,7 +211,7 @@ All component styles reference token variables (e.g., `bg-primary`, `text-foregr
 
 2. Use [Conventional Commits](https://www.conventionalcommits.org/):
 
-   ```
+   ```text
    feat(ui): add Tooltip component
    fix(hooks): resolve useDebounce cleanup on unmount
    ```
