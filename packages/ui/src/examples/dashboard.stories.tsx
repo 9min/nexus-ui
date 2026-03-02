@@ -344,6 +344,7 @@ function DashboardPage() {
 
 const meta: Meta = {
   title: 'Examples/Dashboard',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

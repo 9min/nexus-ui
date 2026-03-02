@@ -370,6 +370,7 @@ function MusicPlayerPage() {
 
 const meta: Meta = {
   title: 'Examples/Music Player',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

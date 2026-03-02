@@ -372,6 +372,7 @@ function AuthFormsPage() {
 
 const meta: Meta = {
   title: 'Examples/Auth Forms',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

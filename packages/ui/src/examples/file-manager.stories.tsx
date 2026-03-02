@@ -362,6 +362,7 @@ function FileManagerPage() {
 
 const meta: Meta = {
   title: 'Examples/File Manager',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

@@ -167,6 +167,7 @@ function ColorsPage() {
 
 const meta: Meta = {
   title: 'Foundations/Colors',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

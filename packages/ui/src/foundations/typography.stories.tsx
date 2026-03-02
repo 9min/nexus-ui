@@ -156,6 +156,7 @@ function TypographyPage() {
 
 const meta: Meta = {
   title: 'Foundations/Typography',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

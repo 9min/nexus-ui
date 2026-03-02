@@ -173,6 +173,7 @@ function SpacingPage() {
 
 const meta: Meta = {
   title: 'Foundations/Spacing & Layout',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

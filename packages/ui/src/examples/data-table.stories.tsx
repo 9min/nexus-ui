@@ -358,6 +358,7 @@ function DataTablePage() {
 
 const meta: Meta = {
   title: 'Examples/Data Table',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

@@ -325,6 +325,7 @@ function KanbanBoardPage() {
 
 const meta: Meta = {
   title: 'Examples/Kanban Board',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 

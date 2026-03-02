@@ -233,6 +233,7 @@ function AnimationsPage() {
 
 const meta: Meta = {
   title: 'Foundations/Animations',
+  tags: ['!autodocs'],
   parameters: { layout: 'fullscreen' },
 };
 
