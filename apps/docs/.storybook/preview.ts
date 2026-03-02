@@ -10,6 +10,9 @@ const preview: Preview = {
         type: 'code',
       },
     },
+    backgrounds: {
+      grid: { disable: true },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
