@@ -188,8 +188,8 @@ import { ButtonProps } from './button';
 @nexus-ui-kit/tokens  (의존성 없음, 최하위 레이어)
     ↓
 @nexus-ui-kit/ui      (tokens 의존, radix-ui 의존)
-    ↑
-@nexus-ui-kit/hooks   (React만 peerDependency)
+
+@nexus-ui-kit/hooks   (독립 패키지, React만 peerDependency)
 ```
 
 - `react`, `react-dom`은 반드시 `peerDependencies`로 선언

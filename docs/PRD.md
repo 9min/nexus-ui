@@ -62,8 +62,8 @@
 | `packages/hooks` | `@nexus-ui-kit/hooks` | 공통 React 훅 (useMediaQuery, useDebounce 등) |
 | `packages/tokens` | `@nexus-ui-kit/tokens` | 디자인 토큰 (색상, 타이포그래피, 스페이싱 등) |
 
-- **NPM 배포**: 공개 NPM 레지스트리, `@nexus-ui` 스코프
-- **의존성 방향**: `@nexus-ui-kit/tokens` → `@nexus-ui-kit/ui` ← `@nexus-ui-kit/hooks`
+- **NPM 배포**: 공개 NPM 레지스트리, `@nexus-ui-kit` 스코프
+- **의존성 방향**: `@nexus-ui-kit/tokens` → `@nexus-ui-kit/ui`, `@nexus-ui-kit/hooks` (독립)
 
 ---
 
