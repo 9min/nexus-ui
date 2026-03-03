@@ -1,6 +1,6 @@
 {
   "name": "@nexus-ui-kit/hooks",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -18,7 +18,9 @@
       }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "clean": "rimraf dist",
