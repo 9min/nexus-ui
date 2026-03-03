@@ -1,11 +1,13 @@
 {
   "name": "@nexus-ui-kit/tokens",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "exports": {
     ".": {
       "import": {
@@ -19,7 +21,9 @@
     },
     "./styles.css": "./dist/styles.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup && node scripts/copy-css.js",
     "clean": "rimraf dist",
