@@ -14,7 +14,7 @@ Workflow 1: CI (PR 검증)
 ├── Typecheck
 ├── Test (Vitest)
 ├── Build
-└── Chromatic VRT (비활성 — 토큰 설정 후 활성화 예정)
+└── (Chromatic VRT — 비활성, 향후 추가 예정)
     ↓ (모두 통과 + 리뷰 승인)
 [main Merge]
     ↓
@@ -57,8 +57,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - uses: actions/setup-node@v4
         with:
@@ -75,8 +73,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - uses: actions/setup-node@v4
         with:
@@ -93,8 +89,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - uses: actions/setup-node@v4
         with:
@@ -111,8 +105,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - uses: actions/setup-node@v4
         with:
@@ -121,32 +113,6 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-
-  chromatic:
-    name: Chromatic
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Chromatic은 전체 git 이력이 필요
-
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-
-      - uses: chromaui/action@latest
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          workingDir: apps/docs
-          exitZeroOnChanges: true  # 변경 감지 시에도 CI 실패하지 않음 (리뷰로 처리)
 ```
 
 ### 2.2 병렬 실행 전략
@@ -156,11 +122,10 @@ ci.yml 트리거
     ├── lint       ─────────→ ✅
     ├── typecheck  ─────────→ ✅
     ├── test       ─────────→ ✅
-    ├── build      ─────────→ ✅
-    └── chromatic  ─────────→ ⏸️ (비활성 — CHROMATIC_PROJECT_TOKEN 설정 후 활성화)
+    └── build      ─────────→ ✅
 ```
 
-- 5개 잡이 **동시에 병렬 실행**되어 총 실행 시간을 최소화합니다.
+- 4개 잡이 **동시에 병렬 실행**되어 총 실행 시간을 최소화합니다.
 - `concurrency` 설정으로 같은 PR의 이전 실행이 자동 취소됩니다.
 - 하나라도 실패하면 PR Merge가 차단됩니다 (Branch Protection 설정).
 
@@ -196,8 +161,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - uses: actions/setup-node@v4
         with:
@@ -207,6 +170,11 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+
+      - name: Configure npm authentication
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create Release Pull Request or Publish
         id: changesets
@@ -293,8 +261,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 9
 
       - uses: actions/setup-node@v4
         with:
@@ -337,8 +303,8 @@ GitHub 레포지토리 **Settings → Secrets and variables → Actions**에 다
 
 | 시크릿 | 용도 | 획득 방법 |
 |--------|------|-----------|
-| `NPM_TOKEN` | NPM 패키지 배포 인증 | npmjs.com → Access Tokens → Automation |
-| `CHROMATIC_PROJECT_TOKEN` | Chromatic VRT | chromatic.com → 프로젝트 설정 |
+| `NPM_TOKEN` | NPM 패키지 배포 인증 | npmjs.com → Access Tokens → Granular Access Token (2FA bypass 필수) |
+| `CHROMATIC_PROJECT_TOKEN` (선택) | Chromatic VRT (향후 활성화 시) | chromatic.com → 프로젝트 설정 |
 | `VERCEL_TOKEN` | Vercel 배포 인증 | vercel.com → Settings → Tokens |
 | `VERCEL_ORG_ID` | Vercel 조직 식별 | vercel.com → Settings → General |
 | `VERCEL_PROJECT_ID` | Vercel 프로젝트 식별 | vercel.com → Project Settings |
@@ -372,7 +338,7 @@ feature/* 브랜치에서 PR 생성
     ↓
 ┌── CI Workflow ──────────────────────┐
 │  Lint ✅  Typecheck ✅  Test ✅      │
-│  Build ✅  Chromatic ⏸️              │
+│  Build ✅                             │
 └─────────────────────────────────────┘
     ↓
 CodeRabbit 리뷰 + 동료 리뷰 → 승인
