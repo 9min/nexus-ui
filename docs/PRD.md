@@ -58,12 +58,12 @@
 
 | 패키지 | 스코프명 | 역할 |
 |--------|----------|------|
-| `packages/ui` | `@nexus-ui/ui` | 핵심 UI 컴포넌트 (Button, Dialog, Select 등) |
-| `packages/hooks` | `@nexus-ui/hooks` | 공통 React 훅 (useMediaQuery, useDebounce 등) |
-| `packages/tokens` | `@nexus-ui/tokens` | 디자인 토큰 (색상, 타이포그래피, 스페이싱 등) |
+| `packages/ui` | `@nexus-ui-kit/ui` | 핵심 UI 컴포넌트 (Button, Dialog, Select 등) |
+| `packages/hooks` | `@nexus-ui-kit/hooks` | 공통 React 훅 (useMediaQuery, useDebounce 등) |
+| `packages/tokens` | `@nexus-ui-kit/tokens` | 디자인 토큰 (색상, 타이포그래피, 스페이싱 등) |
 
-- **NPM 배포**: 공개 NPM 레지스트리, `@nexus-ui` 스코프
-- **의존성 방향**: `@nexus-ui/tokens` → `@nexus-ui/ui` ← `@nexus-ui/hooks`
+- **NPM 배포**: 공개 NPM 레지스트리, `@nexus-ui-kit` 스코프
+- **의존성 방향**: `@nexus-ui-kit/tokens` → `@nexus-ui-kit/ui`, `@nexus-ui-kit/hooks` (독립)
 
 ---
 
@@ -339,7 +339,7 @@
 
 - **Tree-shaking 지원**: ESM 빌드로 사용하지 않는 코드가 최종 번들에 포함되지 않도록 보장
 - **Side-effect free**: `package.json`에 `"sideEffects": false` 선언
-- **코드 분할**: 각 컴포넌트는 독립 entry point로 import 가능 (`@nexus-ui/ui/button`)
+- **코드 분할**: 각 컴포넌트는 독립 entry point로 import 가능 (`@nexus-ui-kit/ui/button`)
 
 ### 7.2 TypeScript 지원
 

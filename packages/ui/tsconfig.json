@@ -1,5 +1,5 @@
 {
-  "extends": "@nexus-ui/tsconfig/react-library.json",
+  "extends": "@nexus-ui-kit/tsconfig/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"

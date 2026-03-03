@@ -57,11 +57,11 @@ pnpm build
 pnpm dev
 
 # 특정 앱만 실행
-pnpm --filter @nexus-ui/docs dev    # Storybook만
-pnpm --filter @nexus-ui/web dev     # Playground만
+pnpm --filter @nexus-ui-kit/docs dev    # Storybook만
+pnpm --filter @nexus-ui-kit/web dev     # Playground만
 
 # 특정 패키지 watch 모드
-pnpm --filter @nexus-ui/ui dev      # UI 패키지만
+pnpm --filter @nexus-ui-kit/ui dev      # UI 패키지만
 ```
 
 ---
@@ -85,11 +85,11 @@ pnpm --filter @nexus-ui/ui dev      # UI 패키지만
 
 ```bash
 # 특정 패키지에서만 실행
-pnpm --filter @nexus-ui/ui test
-pnpm --filter @nexus-ui/hooks lint
+pnpm --filter @nexus-ui-kit/ui test
+pnpm --filter @nexus-ui-kit/hooks lint
 
 # 특정 패키지와 그 의존성까지 빌드
-pnpm --filter @nexus-ui/ui... build
+pnpm --filter @nexus-ui-kit/ui... build
 ```
 
 ---
@@ -123,7 +123,7 @@ Storybook / Next.js의 HMR이 변경된 모듈 감지
 ### 5.1 개발 순서
 
 ```
-1. 디자인 토큰 확인/정의 (@nexus-ui/tokens)
+1. 디자인 토큰 확인/정의 (@nexus-ui-kit/tokens)
         ↓
 2. 컴포넌트 스켈레톤 작성 (packages/ui/src/components/<name>/)
         ↓
@@ -141,7 +141,7 @@ Storybook / Next.js의 HMR이 변경된 모듈 감지
 ### 5.2 Storybook 개발 서버
 
 ```bash
-pnpm --filter @nexus-ui/docs dev
+pnpm --filter @nexus-ui-kit/docs dev
 # http://localhost:6006 에서 Storybook 접속
 ```
 
@@ -222,10 +222,10 @@ pnpm test
 pnpm test:watch
 
 # 특정 패키지만
-pnpm --filter @nexus-ui/ui test
+pnpm --filter @nexus-ui-kit/ui test
 
 # 특정 파일만
-pnpm --filter @nexus-ui/ui test button
+pnpm --filter @nexus-ui-kit/ui test button
 ```
 
 #### 테스트 파일 작성 예시

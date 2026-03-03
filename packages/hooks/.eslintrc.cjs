@@ -1,5 +1,5 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   root: true,
-  extends: ['@nexus-ui/eslint-config/library'],
+  extends: ['@nexus-ui-kit/eslint-config/library'],
 };

@@ -1,4 +1,4 @@
-import { colors, typography, spacing } from '@nexus-ui/tokens';
+import { colors, typography, spacing } from '@nexus-ui-kit/tokens';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Badge } from '../components/badge';

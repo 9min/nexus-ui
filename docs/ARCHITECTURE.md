@@ -23,7 +23,7 @@ nexus-ui/
 │       └── package.json
 │
 ├── packages/
-│   ├── ui/                      # @nexus-ui/ui — 핵심 UI 컴포넌트 (36개)
+│   ├── ui/                      # @nexus-ui-kit/ui — 핵심 UI 컴포넌트 (36개)
 │   │   ├── src/
 │   │   │   ├── components/
 │   │   │   │   ├── button/
@@ -72,7 +72,7 @@ nexus-ui/
 │   │   ├── tsup.config.ts
 │   │   └── package.json
 │   │
-│   ├── hooks/                   # @nexus-ui/hooks — 공통 React 훅
+│   ├── hooks/                   # @nexus-ui-kit/hooks — 공통 React 훅
 │   │   ├── src/
 │   │   │   ├── use-media-query.ts
 │   │   │   ├── use-debounce.ts
@@ -81,7 +81,7 @@ nexus-ui/
 │   │   ├── tsup.config.ts
 │   │   └── package.json
 │   │
-│   ├── tokens/                  # @nexus-ui/tokens — 디자인 토큰
+│   ├── tokens/                  # @nexus-ui-kit/tokens — 디자인 토큰
 │   │   ├── src/
 │   │   │   ├── colors.ts
 │   │   │   ├── typography.ts
@@ -138,12 +138,12 @@ nexus-ui/
 
 - **역할**: 실제 애플리케이션 환경에서 컴포넌트 통합 테스트
 - **기술**: Next.js + React 18
-- **특징**: `@nexus-ui/ui`를 `dependencies`로 참조, 실제 사용 시나리오 검증
+- **특징**: `@nexus-ui-kit/ui`를 `dependencies`로 참조, 실제 사용 시나리오 검증
 
 ### 2.3 `packages/ui` — 핵심 UI 컴포넌트
 
 - **역할**: Button, Dialog, Select 등 모든 공개 UI 컴포넌트
-- **의존성**: `@nexus-ui/tokens` (디자인 토큰), `@radix-ui/*` (Headless 프리미티브)
+- **의존성**: `@nexus-ui-kit/tokens` (디자인 토큰), `@radix-ui/*` (Headless 프리미티브)
 - **빌드**: tsup으로 ESM + CJS 빌드
 
 ### 2.4 `packages/hooks` — 공통 React 훅
@@ -186,16 +186,15 @@ nexus-ui/
 │                    ▼                                  │
 │              packages/ (라이브러리)                     │
 │                                                       │
-│  ┌──────────────────┐    ┌──────────────────┐        │
-│  │  @nexus-ui/ui    │───▶│ @nexus-ui/tokens │        │
-│  │  (컴포넌트)       │    │  (디자인 토큰)    │        │
-│  └──────────────────┘    └──────────────────┘        │
-│         ▲                                             │
-│         │ optional                                    │
-│  ┌──────┴───────────┐                                │
-│  │ @nexus-ui/hooks  │                                │
-│  │  (React 훅)       │                                │
-│  └──────────────────┘                                │
+│  ┌─────────────────────┐    ┌─────────────────────┐  │
+│  │  @nexus-ui-kit/ui   │───▶│ @nexus-ui-kit/tokens │  │
+│  │  (컴포넌트)          │    │  (디자인 토큰)        │  │
+│  └─────────────────────┘    └─────────────────────┘  │
+│                                                       │
+│  ┌─────────────────────┐                              │
+│  │ @nexus-ui-kit/hooks │  (독립 패키지)               │
+│  │  (React 훅)          │                              │
+│  └─────────────────────┘                              │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -203,9 +202,9 @@ nexus-ui/
 
 | 패키지 | dependencies | peerDependencies |
 |--------|-------------|------------------|
-| `@nexus-ui/tokens` | 없음 | 없음 |
-| `@nexus-ui/hooks` | 없음 | `react`, `react-dom` |
-| `@nexus-ui/ui` | `@nexus-ui/tokens`, `@radix-ui/*`, `class-variance-authority`, `clsx`, `tailwind-merge` | `react`, `react-dom` |
+| `@nexus-ui-kit/tokens` | 없음 | 없음 |
+| `@nexus-ui-kit/hooks` | 없음 | `react`, `react-dom` |
+| `@nexus-ui-kit/ui` | `@nexus-ui-kit/tokens`, `@radix-ui/*`, `class-variance-authority`, `clsx`, `tailwind-merge` | `react`, `react-dom` |
 
 > **핵심 원칙**: `react`, `react-dom`은 반드시 `peerDependencies`로 선언하여 호스트 앱과 버전 충돌을 방지합니다.
 
@@ -248,7 +247,7 @@ packages/ui/dist/
 
 ```json
 {
-  "name": "@nexus-ui/ui",
+  "name": "@nexus-ui-kit/ui",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -356,7 +355,7 @@ packages:
 // apps/docs/package.json
 {
   "dependencies": {
-    "@nexus-ui/ui": "workspace:*"
+    "@nexus-ui-kit/ui": "workspace:*"
   }
 }
 ```

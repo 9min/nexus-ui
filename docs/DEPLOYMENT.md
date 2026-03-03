@@ -305,7 +305,7 @@ jobs:
       - run: pnpm build
 
       - name: Build Storybook
-        run: pnpm --filter @nexus-ui/docs build-storybook
+        run: pnpm --filter @nexus-ui-kit/docs build-storybook
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
@@ -382,7 +382,7 @@ Squash & Merge → main
 ┌── Release Workflow ─────────────────┐
 │  Changesets: Version PR 생성/갱신    │
 │  (Version PR Merge 시)              │
-│  → NPM Publish (@nexus-ui/*)       │
+│  → NPM Publish (@nexus-ui-kit/*)       │
 │  → Git Tag (v0.1.0 등)             │
 └─────────────────────────────────────┘
     ↓

@@ -1,5 +1,5 @@
 {
-  "extends": "@nexus-ui/tsconfig/base.json",
+  "extends": "@nexus-ui-kit/tsconfig/base.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"

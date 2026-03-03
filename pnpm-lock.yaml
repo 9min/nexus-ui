@@ -23,10 +23,10 @@ importers:
 
   apps/docs:
     dependencies:
-      '@nexus-ui/tokens':
+      '@nexus-ui-kit/tokens':
         specifier: workspace:*
         version: link:../../packages/tokens
-      '@nexus-ui/ui':
+      '@nexus-ui-kit/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       react:
@@ -102,10 +102,10 @@ importers:
 
   packages/hooks:
     devDependencies:
-      '@nexus-ui/eslint-config':
+      '@nexus-ui-kit/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@nexus-ui/tsconfig':
+      '@nexus-ui-kit/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@testing-library/react':
@@ -147,10 +147,10 @@ importers:
 
   packages/tokens:
     devDependencies:
-      '@nexus-ui/eslint-config':
+      '@nexus-ui-kit/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@nexus-ui/tsconfig':
+      '@nexus-ui-kit/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       eslint:
@@ -170,7 +170,7 @@ importers:
 
   packages/ui:
     dependencies:
-      '@nexus-ui/tokens':
+      '@nexus-ui-kit/tokens':
         specifier: workspace:*
         version: link:../tokens
       class-variance-authority:
@@ -183,10 +183,10 @@ importers:
         specifier: ^2.3.0
         version: 2.6.1
     devDependencies:
-      '@nexus-ui/eslint-config':
+      '@nexus-ui-kit/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@nexus-ui/tsconfig':
+      '@nexus-ui-kit/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@radix-ui/react-accordion':

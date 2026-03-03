@@ -1,5 +1,5 @@
 {
-  "name": "@nexus-ui/eslint-config",
+  "name": "@nexus-ui-kit/eslint-config",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
