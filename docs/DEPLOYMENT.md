@@ -304,7 +304,7 @@ GitHub 레포지토리 **Settings → Secrets and variables → Actions**에 다
 | 시크릿 | 용도 | 획득 방법 |
 |--------|------|-----------|
 | `NPM_TOKEN` | NPM 패키지 배포 인증 | npmjs.com → Access Tokens → Granular Access Token (2FA bypass 필수) |
-| `CHROMATIC_PROJECT_TOKEN` | Chromatic VRT | chromatic.com → 프로젝트 설정 |
+| `CHROMATIC_PROJECT_TOKEN` (선택) | Chromatic VRT (향후 활성화 시) | chromatic.com → 프로젝트 설정 |
 | `VERCEL_TOKEN` | Vercel 배포 인증 | vercel.com → Settings → Tokens |
 | `VERCEL_ORG_ID` | Vercel 조직 식별 | vercel.com → Settings → General |
 | `VERCEL_PROJECT_ID` | Vercel 프로젝트 식별 | vercel.com → Project Settings |
