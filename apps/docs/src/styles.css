@@ -1,4 +1,4 @@
-@import '@nexus-ui/tokens/styles.css';
+@import '@nexus-ui-kit/tokens/styles.css';
 
 @tailwind base;
 @tailwind components;

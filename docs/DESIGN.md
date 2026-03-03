@@ -474,7 +474,7 @@ export default config;
 
 ```tsx
 // 호스트 앱에서 사용
-import '@nexus-ui/tokens/styles.css'; // 토큰 CSS import
+import '@nexus-ui-kit/tokens/styles.css'; // 토큰 CSS import
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -492,7 +492,7 @@ function App() {
 ### 3.3 시스템 테마 감지
 
 ```typescript
-// @nexus-ui/hooks에서 제공
+// @nexus-ui-kit/hooks에서 제공
 function useTheme() {
   // prefers-color-scheme 미디어 쿼리 감지
   // localStorage 기반 사용자 선호 저장

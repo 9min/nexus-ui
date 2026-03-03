@@ -1,4 +1,4 @@
-import { typography } from '@nexus-ui/tokens';
+import { typography } from '@nexus-ui-kit/tokens';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { cn } from '../lib/utils';
@@ -138,7 +138,7 @@ function TypographyPage() {
               iterate faster with confidence that their work aligns with the broader product vision.
             </p>
             <div className={cn('rounded bg-muted p-4 font-mono text-sm')}>
-              <code>import {'{ Button }'} from &apos;@nexus-ui/ui&apos;;</code>
+              <code>import {'{ Button }'} from &apos;@nexus-ui-kit/ui&apos;;</code>
             </div>
             <p className={cn('text-xs text-muted-foreground')}>
               Caption: Tokens flow from primitives through semantic layers into component APIs.

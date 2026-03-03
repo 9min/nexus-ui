@@ -1,4 +1,4 @@
-import { colors } from '@nexus-ui/tokens';
+import { colors } from '@nexus-ui-kit/tokens';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { cn } from '../lib/utils';
@@ -94,7 +94,7 @@ function ColorsPage() {
         <section className={cn('space-y-6')}>
           <h2 className={cn('text-2xl font-bold')}>Primitive Palettes</h2>
           <p className={cn('text-sm text-muted-foreground')}>
-            Fixed hex values from <code className={cn('rounded bg-muted px-1 py-0.5 font-mono text-xs')}>@nexus-ui/tokens</code>.
+            Fixed hex values from <code className={cn('rounded bg-muted px-1 py-0.5 font-mono text-xs')}>@nexus-ui-kit/tokens</code>.
             These do not change between themes.
           </p>
           <div className={cn('space-y-6')}>

@@ -8,8 +8,8 @@
 
 - **프로젝트**: nexus-ui — 엔터프라이즈급 디자인 시스템 모노레포
 - **기술 스택**: pnpm, Turborepo, React 18, TypeScript, Tailwind CSS, Radix UI, tsup, Storybook, Changesets
-- **패키지 구성**: `@nexus-ui/ui`, `@nexus-ui/hooks`, `@nexus-ui/tokens`
-- **NPM 배포**: 공개 NPM 레지스트리, `@nexus-ui` 스코프
+- **패키지 구성**: `@nexus-ui-kit/ui`, `@nexus-ui-kit/hooks`, `@nexus-ui-kit/tokens`
+- **NPM 배포**: 공개 NPM 레지스트리, `@nexus-ui-kit` 스코프
 
 ---
 
@@ -185,11 +185,11 @@ import { ButtonProps } from './button';
 ### 패키지 간 의존성
 
 ```
-@nexus-ui/tokens  (의존성 없음, 최하위 레이어)
+@nexus-ui-kit/tokens  (의존성 없음, 최하위 레이어)
     ↓
-@nexus-ui/ui      (tokens 의존, radix-ui 의존)
+@nexus-ui-kit/ui      (tokens 의존, radix-ui 의존)
     ↑
-@nexus-ui/hooks   (React만 peerDependency)
+@nexus-ui-kit/hooks   (React만 peerDependency)
 ```
 
 - `react`, `react-dom`은 반드시 `peerDependencies`로 선언
@@ -199,14 +199,14 @@ import { ButtonProps } from './button';
 
 ```tsx
 // ✅ 패키지 스코프로 import (외부에서 사용 시)
-import { Button } from '@nexus-ui/ui';
-import { useDebounce } from '@nexus-ui/hooks';
+import { Button } from '@nexus-ui-kit/ui';
+import { useDebounce } from '@nexus-ui-kit/hooks';
 
 // ✅ 상대 경로 (패키지 내부에서 사용 시)
 import { cn } from '../../lib/utils';
 
 // ❌ 금지: 다른 패키지의 내부 경로 직접 접근
-import { cn } from '@nexus-ui/ui/src/lib/utils';
+import { cn } from '@nexus-ui-kit/ui/src/lib/utils';
 ```
 
 ---

@@ -1,4 +1,4 @@
-import { spacing, borderRadius } from '@nexus-ui/tokens';
+import { spacing, borderRadius } from '@nexus-ui-kit/tokens';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { cn } from '../lib/utils';

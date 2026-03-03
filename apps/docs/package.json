@@ -1,5 +1,5 @@
 {
-  "name": "@nexus-ui/docs",
+  "name": "@nexus-ui-kit/docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@nexus-ui/tokens": "workspace:*",
-    "@nexus-ui/ui": "workspace:*",
+    "@nexus-ui-kit/tokens": "workspace:*",
+    "@nexus-ui-kit/ui": "workspace:*",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },

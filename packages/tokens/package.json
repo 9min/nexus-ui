@@ -1,5 +1,5 @@
 {
-  "name": "@nexus-ui/tokens",
+  "name": "@nexus-ui-kit/tokens",
   "version": "0.0.0",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -27,8 +27,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@nexus-ui/eslint-config": "workspace:*",
-    "@nexus-ui/tsconfig": "workspace:*",
+    "@nexus-ui-kit/eslint-config": "workspace:*",
+    "@nexus-ui-kit/tsconfig": "workspace:*",
     "eslint": "^8.57.0",
     "tsup": "^8.0.0",
     "typescript": "^5.4.0",

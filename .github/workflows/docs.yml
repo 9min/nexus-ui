@@ -25,7 +25,7 @@ jobs:
       - run: pnpm build
 
       - name: Build Storybook
-        run: pnpm --filter @nexus-ui/docs build-storybook
+        run: pnpm --filter @nexus-ui-kit/docs build-storybook
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25

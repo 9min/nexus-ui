@@ -99,9 +99,9 @@ main (보호됨)
 
 | Scope | 대상 |
 |-------|------|
-| `ui` | `@nexus-ui/ui` 패키지 |
-| `hooks` | `@nexus-ui/hooks` 패키지 |
-| `tokens` | `@nexus-ui/tokens` 패키지 |
+| `ui` | `@nexus-ui-kit/ui` 패키지 |
+| `hooks` | `@nexus-ui-kit/hooks` 패키지 |
+| `tokens` | `@nexus-ui-kit/tokens` 패키지 |
 | `docs` | Storybook, 문서 |
 | `ci` | CI/CD 파이프라인 |
 | `config` | 공유 설정 (ESLint, TSConfig) |
@@ -203,7 +203,7 @@ pnpm changeset
 ```
 
 실행 시 다음을 선택합니다:
-1. **변경된 패키지** 선택 (예: `@nexus-ui/ui`)
+1. **변경된 패키지** 선택 (예: `@nexus-ui-kit/ui`)
 2. **변경 수준** 선택 (major / minor / patch)
 3. **변경 설명** 입력
 
@@ -220,7 +220,7 @@ pnpm changeset
 ```markdown
 <!-- .changeset/happy-tiger-dance.md -->
 ---
-"@nexus-ui/ui": minor
+"@nexus-ui-kit/ui": minor
 ---
 
 Button 컴포넌트에 `loading` 상태와 `leftIcon`, `rightIcon` props를 추가했습니다.
